@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceite de Coco Jazmín Oliveros | Tradición del Pacífico</title>
+    <meta name="description"
+        content="Aceite de coco 100% artesanal de Bahía Solano, Chocó. Tradición viva del Pacífico colombiano por Jazmín Oliveros.">
+    <meta name="keywords"
+        content="aceite de coco, artesanal, Chocó, Bahía Solano, Jazmín Oliveros, natural, cosmético, alimenticio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aceitedecocojazmin.com/">
+    <meta property="og:title" content="Aceite de Coco Jazmín Oliveros | Tradición del Pacífico">
+    <meta property="og:description"
+        content="Aceite de coco 100% artesanal de Bahía Solano, Chocó. Tradición viva del Pacífico colombiano.">
+    <meta property="og:image" content="https://aceitedecocojazmin.com/aceite-de-coco-jazmin.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Aceite de Coco Jazmín Oliveros | Tradición del Pacífico">
+    <meta property="twitter:description"
+        content="Aceite de coco 100% artesanal de Bahía Solano, Chocó. Tradición viva del Pacífico colombiano.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#2E5D4B',  // Verde hoja profundo (corporativo)
+                            brown: '#8D6E63',  // Marrón tierra suave
+                            light: '#F9F7F2',  // Fondo crema/papel
+                            white: '#FFFFFF',  // Blanco puro
+                            accent: '#D4C378'  // Dorado suave/Arena
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Raleway"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'palm-pattern': "url('https://www.transparenttextures.com/patterns/cubes.webp')", // Sutil textura
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ajuste para el menú sticky: evita que tape los títulos */
+        html {
+            scroll-padding-top: 100px;
+            /* Altura aprox del navbar */
+        }
+
+        /* Estilos base para suavidad */
+        body {
+            background-color: #F9F7F2;
+        }
+
+        /* Animación suave para imágenes */
+        .img-hover-zoom {
+            transition: transform 0.5s ease;
+        }
+
+        .img-hover-zoom:hover {
+            transform: scale(1.03);
+        }
+
+        /* Botón estilo 'Ghost' elegante */
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #2E5D4B;
+            color: #2E5D4B;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: #2E5D4B;
+            color: white;
+        }
+
+        /* Animaciones Personalizadas */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        .animate-slide-up {
+            opacity: 0;
+            animation: slideUp 0.8s ease-out 0.3s forwards;
+        }
+
+        .animate-slide-up-delayed {
+            opacity: 0;
+            animation: slideUp 0.8s ease-out 0.6s forwards;
+        }
+
+        /* Scroll Reveal: More fluid and organic */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Delays for reveal children */
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(46, 93, 75, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #F9F7F2;
+            width: 95%;
+            max-width: 1100px;
+            margin: auto;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-scrollable {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #2E5D4B #f1f1f1;
+        }
+
+        .modal-scrollable::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-scrollable::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .modal-scrollable::-webkit-scrollbar-thumb {
+            background: #2E5D4B;
+            border-radius: 10px;
+        }
+
+        /* Gallery Thumbnails */
+        .thumb-active {
+            border: 3px solid #D4C378 !important;
+            opacity: 1 !important;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        /* Active Navigation States */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #D4C378;
+            /* brand-accent */
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link-active::after {
+            width: 100%;
+        }
+
+        .nav-link-active {
+            color: #2E5D4B !important;
+            /* brand-green */
+            font-weight: 700 !important;
+        }
+
+        /* Luxury Shadows: Multi-layered soft shadows */
+        .shadow-luxury {
+            box-shadow:
+                0 10px 20px -5px rgba(46, 93, 75, 0.05),
+                0 20px 40px -10px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .shadow-luxury:hover {
+            box-shadow:
+                0 20px 40px -5px rgba(46, 93, 75, 0.1),
+                0 30px 60px -15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Shimmer Effect for Buttons */
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) skewX(-15deg);
+            }
+
+            100% {
+                transform: translateX(200%) skewX(-15deg);
+            }
+        }
+
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shimmer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        /* Liquid Fill Effect for Buttons */
+        .btn-liquid {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: color 0.4s ease;
+        }
+
+        .btn-liquid::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: #2E5D4B;
+            z-index: -1;
+            transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-liquid:hover::after {
+            height: 100%;
+        }
+
+        .btn-liquid:hover {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body class="text-gray-700 font-sans antialiased selection:bg-brand-green selection:text-white">
+
+    <!-- Navbar: Ajustado para mejor visibilidad y espaciado -->
+    <nav class="sticky top-0 w-full z-50 bg-white shadow-sm transition-all duration-300 border-b border-brand-green/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0 flex items-center group cursor-pointer" aria-label="Volver al inicio">
+                    <!-- Aquí usamos tu logo real en PNG que ya incluye el texto -->
+                    <img src="aceite-de-coco-jazmin.webp" alt="Logo Jazmín Oliveros"
+                        class="h-14 w-auto md:h-20 object-contain transition-transform duration-500 group-hover:scale-105">
+                </a>
+
+                <!-- Desktop Menu (Visible en pantallas grandes LG+) -->
+                <div
+                    class="hidden lg:flex space-x-6 xl:space-x-8 items-center relative py-2 px-6 rounded-full overflow-hidden">
+                    <!-- Subtle Texture Background -->
+                    <div class="absolute inset-0 opacity-[0.12] pointer-events-none">
+                        <img src="assets/coconut_palm_footer_bg.webp" class="w-full h-full object-cover">
+                    </div>
+                    <a href="#inicio"
+                        class="nav-link text-gray-600 hover:text-brand-green font-medium transition text-sm xl:text-base uppercase tracking-wide relative z-10">Inicio</a>
+                    <a href="#historia"
+                        class="nav-link text-gray-600 hover:text-brand-green font-medium transition text-sm xl:text-base uppercase tracking-wide relative z-10">Historia</a>
+                    <a href="#productos"
+                        class="nav-link text-gray-600 hover:text-brand-green font-medium transition text-sm xl:text-base uppercase tracking-wide relative z-10">Productos</a>
+                    <a href="#proceso"
+                        class="nav-link text-gray-600 hover:text-brand-green font-medium transition text-sm xl:text-base uppercase tracking-wide relative z-10">Proceso</a>
+                    <a href="#experiencias"
+                        class="nav-link text-gray-600 hover:text-brand-green font-medium transition text-sm xl:text-base uppercase tracking-wide relative z-10">Experiencias</a>
+                    <a href="#contacto"
+                        class="px-5 py-2 bg-brand-green text-white rounded-none hover:bg-green-800 transition shadow text-sm xl:text-base font-bold uppercase tracking-widest relative z-10">
+                        Contacto
+                    </a>
+                </div>
+
+                <!-- Mobile Button (Visible hasta LG) -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="p-2 rounded-md text-brand-green hover:bg-brand-light focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Dropdown completo) -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl overflow-hidden">
+            <!-- Subtle Texture Overlay -->
+            <div class="absolute inset-0 opacity-[0.1] pointer-events-none">
+                <img src="assets/coconut_palm_footer_bg.webp" class="w-full h-full object-cover">
+            </div>
+            <div class="px-6 py-6 space-y-4 flex flex-col items-center relative z-10">
+                <a href="#inicio"
+                    class="nav-link text-brand-green font-medium hover:text-brand-brown text-lg">Inicio</a>
+                <a href="#historia" class="nav-link text-brand-green font-medium hover:text-brand-brown text-lg">Nuestra
+                    Historia</a>
+                <a href="#productos"
+                    class="nav-link text-brand-green font-medium hover:text-brand-brown text-lg">Productos</a>
+                <a href="#proceso"
+                    class="nav-link text-brand-green font-medium hover:text-brand-brown text-lg">Proceso</a>
+                <a href="#experiencias"
+                    class="nav-link text-brand-green font-medium hover:text-brand-brown text-lg">Experiencias</a>
+                <a href="#contacto"
+                    class="w-full text-center py-3 bg-brand-green text-white font-bold rounded mt-2">Contacto
+                    WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero: Imagen Natural y Fresca -->
+    <header id="inicio" class="relative h-[90vh] flex items-center bg-brand-light overflow-hidden">
+        <div class="absolute inset-0 z-0 scale-105 animate-fade-in">
+            <!-- Imagen de fondo luminosa (palmeras/playa/cocos) -->
+            <img src="assets/hero.webp" class="w-full h-full object-cover">
+            <!-- Overlay degradado para profundidad -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
+            <!-- Sutil viñeta -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-green/5"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-6 animate-slide-up">
+                    <span class="w-8 h-[1px] bg-brand-green"></span>
+                    <span class="text-brand-green text-sm font-bold tracking-[0.3em] uppercase">
+                        Bahía Solano, Chocó
+                    </span>
+                </div>
+
+                <h1
+                    class="text-5xl md:text-8xl font-serif font-bold text-brand-green mb-8 leading-[1.1] animate-slide-up">
+                    Coco, tradición <br><span class="text-brand-brown">y saberes.</span>
+                </h1>
+
+                <p class="text-xl text-gray-700 mb-12 leading-relaxed font-light max-w-lg animate-slide-up-delayed">
+                    Producción artesanal de aceite de coco y derivados. Cultivados y elaborados con prácticas
+                    tradicionales y respeto profundo por la tierra.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 animate-slide-up-delayed">
+                    <a href="#productos"
+                        class="btn-shimmer group relative px-10 py-5 bg-brand-green text-white font-bold transition-all hover:bg-green-800 shadow-xl overflow-hidden">
+                        <span class="relative z-10 tracking-widest text-base text-center">DESCUBRIR COSECHA</span>
+                        <div
+                            class="absolute inset-0 bg-white/10 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500">
+                        </div>
+                    </a>
+                    <a href="https://wa.me/573147947552"
+                        class="btn-shimmer px-10 py-5 bg-white/80 backdrop-blur-md border border-brand-green/30 text-brand-green font-bold hover:bg-brand-green hover:text-white transition-all shadow-lg text-center flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"
+                            class="w-5 h-5">
+                            <path
+                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                        </svg> <span class="tracking-widest text-base">ESCRÍBENOS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elemento decorativo inferior: Ahora funcional -->
+        <a href="#historia"
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-40 hover:opacity-100 transition-opacity z-20">
+            <i data-lucide="chevron-down" class="text-brand-green w-8 h-8"></i>
+        </a>
+    </header>
+
+    <!-- Banner de Confianza / Valor -->
+    <div class="bg-brand-green py-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-palm-pattern"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex items-center justify-center gap-3 text-white/90">
+                    <i data-lucide="leaf" class="w-6 h-6 text-brand-accent"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">100% Orgánico</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-white/90">
+                    <i data-lucide="award" class="w-6 h-6 text-brand-accent"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Calidad Premium</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-white/90">
+                    <i data-lucide="truck" class="w-6 h-6 text-brand-accent"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Envíos Nacionales</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-white/90">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-brand-accent"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase">Compra Segura</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Jazmín Oliveros (Identidad) -->
+    <section id="historia" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative group reveal">
+                    <div
+                        class="aspect-[4/5] bg-gray-100 relative z-10 p-4 border border-white shadow-luxury transition-all duration-700 group-hover:rotate-0 rotate-2">
+                        <!-- Foto Jazmín (Placeholder) -->
+                        <img src="assets/jazmin.webp" class="w-full h-full object-cover filter brightness-95">
+                        <div
+                            class="absolute bottom-10 left-10 right-10 bg-white/95 backdrop-blur-sm p-6 text-center shadow-lg border-t-2 border-brand-accent">
+                            <p class="font-serif text-brand-green text-xl font-bold">Jazmín Oliveros Segura</p>
+                            <p class="text-xs text-brand-brown uppercase tracking-[0.2em] mt-2">Corazón del Pacífico
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Elemento decorativo detrás -->
+                    <div
+                        class="absolute top-0 right-0 w-full h-full border-2 border-brand-accent transform translate-x-6 -translate-y-6 -z-0 opacity-30 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="md:w-1/2 reveal reveal-delay-2">
+                    <div class="mb-6 flex items-center gap-3">
+                        <span class="h-[1px] w-10 bg-brand-accent"></span>
+                        <span class="text-brand-brown font-bold text-sm tracking-widest uppercase">Nuestras
+                            Raíces</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-green mb-8 leading-tight">El legado
+                        de una tierra bendecida</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Jazmín Oliveros Segura es el rostro de una tradición viva. Como <strong>Señorita Chocó
+                            1987</strong> y Virreina Nacional, su camino siempre ha estado guiado por el orgullo de su
+                        territorio.
+                    </p>
+                    <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                        Este proyecto familiar nace del alma de Bahía Solano. No solo producimos aceite; preservamos
+                        saberes ancestrales que honran la biodiversidad del Chocó, cuidando cada coco como un regalo de
+                        la naturaleza para tu bienestar.
+                    </p>
+                    <div class="grid grid-cols-2 gap-10 border-t border-gray-100 pt-10">
+                        <div>
+                            <span class="block text-4xl font-serif text-brand-accent mb-2">100%</span>
+                            <span class="text-sm text-gray-400 font-bold uppercase tracking-widest">Esencia
+                                Artesanal</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-serif text-brand-accent mb-2">+30</span>
+                            <span class="text-sm text-gray-400 font-bold uppercase tracking-widest">Años de
+                                Tradición</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos: Estilo Catálogo Limpio -->
+    <section id="productos" class="py-24 bg-brand-light reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-brand-brown font-bold text-sm tracking-widest uppercase mb-4 block">Tesosros de la
+                    Selva</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-green">Nuestra Cosecha</h2>
+                <p class="text-gray-500 mt-6 font-light italic">Pureza extraída gota a gota, directo desde el corazón
+                    del coco.</p>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-8 opacity-50"></div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- Producto 1 -->
+                <div
+                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden relative reveal">
+                    <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
+                        <img src="assets/aceite-puro.webp"
+                            class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
+                        <div class="absolute top-6 left-6 flex flex-col gap-2">
+                            <span
+                                class="bg-brand-green text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Alimenticio</span>
+                        </div>
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Aceite de Coco Puro</h3>
+                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Prensado en frío, ideal para realzar el
+                            sabor de tus recetas con la pureza del Pacífico.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Aceite%20de%20Coco%20Puro%20Alimenticio."
+                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-green border border-brand-green text-sm font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div
+                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-1">
+                    <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
+                        <img src="assets/aceite-cosmetico.webp"
+                            class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
+                        <div class="absolute top-6 left-6">
+                            <span
+                                class="bg-brand-brown text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Cosmético</span>
+                        </div>
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Aceite Cosmético</h3>
+                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Hidratación profunda para piel de seda y
+                            cabello radiante. 100% natural, sin aditivos.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Aceite%20de%20Coco%20Cosmético."
+                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-brown border border-brand-brown text-sm font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div
+                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-2">
+                    <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
+                        <img src="assets/infusion-vainilla.webp"
+                            class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
+                        <div class="absolute top-6 left-6">
+                            <span
+                                class="bg-brand-accent text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Edición
+                                Especial</span>
+                        </div>
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Infusión Vainilla</h3>
+                        <p class="text-gray-600 text-base mb-6 leading-relaxed">El aroma dulce de la vainilla se fusiona
+                            con el coco para una experiencia sensorial única.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20Infusión%20de%20Vainilla."
+                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-accent border border-brand-accent text-sm font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 4 (Crema) -->
+                <div
+                    class="bg-white group hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
+                    <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
+                        <img src="assets/crema-peinar.webp"
+                            class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
+                        <div class="absolute top-6 left-6">
+                            <span
+                                class="bg-brand-green text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Cuidado
+                                Capilar</span>
+                        </div>
+                    </div>
+                    <div class="p-10 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Crema para Peinar</h3>
+                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Formulada con aceite puro para nutrir,
+                            desenredar y dar brillo natural a tu cabello.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20Crema%20para%20Peinar."
+                            class="inline-flex items-center gap-2 px-8 py-3 bg-brand-green text-white text-sm font-bold uppercase tracking-widest hover:bg-green-800 transition-colors shadow-lg">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sección Dulces (Doble Ancho en LG) -->
+                <div
+                    class="lg:col-span-2 bg-brand-green text-white p-10 md:p-16 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden group reveal">
+                    <!-- Textura de fondo sutil -->
+                    <div
+                        class="absolute inset-0 opacity-5 bg-palm-pattern group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+
+                    <div class="relative z-10 lg:w-1/2 flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-8 h-[1px] bg-brand-accent"></span>
+                            <span class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase">Recetas con
+                                Alma</span>
+                        </div>
+                        <h3 class="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">Delicias de la
+                            <br><span class="text-brand-accent italic">Abuela</span>
+                        </h3>
+                        <p class="text-gray-200 text-lg mb-10 leading-relaxed font-light max-w-md">
+                            El afrecho del coco y las frutas locales de Bahía Solano transformados artesanalmente en
+                            sabores que cuentan nuestra historia.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-base">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                    <span>Cocadas con Frutas</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-base">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                    <span>Chicharrón de Coco</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-base">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                    <span>Conservas Naturales</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-base">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                    <span>Miel de Coco</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/573147947552?text=Hola!%20Quiero%20conocer%20la%20variedad%20de%20dulces%20artesanales."
+                            class="group relative inline-flex items-center gap-4 px-10 py-5 bg-white text-brand-green font-bold text-sm uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-accent hover:text-brand-green transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"
+                                class="w-5 h-5">
+                                <path
+                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                            </svg>
+                            Consultar Sabores
+                        </a>
+                    </div>
+
+                    <!-- Composición de Imágenes (Collage Diseñado) -->
+                    <div class="relative z-10 lg:w-1/2 flex items-center justify-center p-4">
+                        <div class="relative w-full aspect-square max-w-lg">
+                            <!-- Foto principal (atrás) -->
+                            <div
+                                class="absolute top-0 right-0 w-4/5 aspect-square border-8 border-white shadow-2xl rotate-2 overflow-hidden transition-transform duration-700 group-hover:rotate-0">
+                                <img src="assets/cocadas.webp" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-brand-green/10"></div>
+                            </div>
+                            <!-- Foto secundaria (superpuesta adelante) -->
+                            <div
+                                class="absolute bottom-0 left-0 w-3/5 aspect-square border-8 border-white shadow-2xl -rotate-3 overflow-hidden transition-transform duration-700 group-hover:-rotate-1">
+                                <img src="assets/chicharron-coco.webp" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-brand-brown/10"></div>
+                            </div>
+                            <!-- Elemento decorativo -->
+                            <div
+                                class="absolute -top-4 -left-4 bg-brand-accent text-brand-green p-4 font-serif italic text-xl shadow-lg z-20">
+                                100% Hecho a Mano
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Datos Útiles: Refined Editorial Design -->
+    <section id="datos-utiles" class="py-24 bg-white reveal overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-20 items-stretch">
+                <!-- Columna Info -->
+                <div class="lg:w-7/12">
+                    <div class="mb-14">
+                        <span
+                            class="text-brand-brown font-bold text-sm tracking-[0.4em] uppercase mb-4 block opacity-60">Manual
+                            de Saberes</span>
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-green mb-8 leading-tight">Guía
+                            esencial del <br>Aceite de Coco</h2>
+                        <p class="text-gray-500 font-light text-lg leading-relaxed max-w-xl">Entender la naturaleza de
+                            nuestro aceite es clave para aprovechar toda su pureza y beneficios ancestrales.</p>
+                    </div>
+
+                    <!-- Grid de Conocimiento -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Usos -->
+                        <div class="space-y-6">
+                            <h4
+                                class="flex items-center gap-3 text-brand-green font-bold tracking-widest uppercase text-sm">
+                                <span class="w-8 h-[1px] bg-brand-accent"></span> Usos Comunes
+                            </h4>
+                            <ul class="space-y-4 text-base text-gray-600">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                    <span><strong>Piel:</strong> Hidratación profunda y elasticidad.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                    <span><strong>Cabello:</strong> Nutrición intensiva y control natural.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0"></div>
+                                    <span><strong>Cocina:</strong> Un toque de salud en cada preparación.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Solidificación -->
+                        <div class="space-y-6">
+                            <h4
+                                class="flex items-center gap-3 text-brand-green font-bold tracking-widest uppercase text-sm">
+                                <span class="w-8 h-[1px] bg-brand-accent"></span> Estado Natural
+                            </h4>
+                            <p
+                                class="text-base text-gray-600 leading-relaxed bg-brand-light/50 p-6 border border-brand-accent/20 italic">
+                                "¿Se puso blanco y duro? ¡Es normal! El aceite puro se solidifica bajo los 24°C sin
+                                perder ni una sola de sus propiedades."
+                            </p>
+                        </div>
+
+                        <!-- Conservación -->
+                        <div class="space-y-6 md:col-span-2">
+                            <h4
+                                class="flex items-center gap-3 text-brand-green font-bold tracking-widest uppercase text-sm">
+                                <span class="w-8 h-[1px] bg-brand-accent"></span> Conservación & Cuidado
+                            </h4>
+                            <div class="flex flex-wrap gap-8">
+                                <div class="flex items-center gap-3 text-base text-gray-600">
+                                    <i data-lucide="lock" class="w-4 h-4 text-brand-brown"></i> Bien cerrado
+                                </div>
+                                <div class="flex items-center gap-3 text-base text-gray-600">
+                                    <i data-lucide="sun" class="w-4 h-4 text-brand-brown"></i> Lugar fresco / seco
+                                </div>
+                                <div class="flex items-center gap-3 text-base text-gray-600">
+                                    <i data-lucide="wind" class="w-4 h-4 text-brand-brown"></i> Sin refrigeración
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nota de Responsabilidad -->
+                    <div
+                        class="mt-16 pt-10 border-t border-gray-100 italic text-xs text-gray-400 leading-relaxed flex gap-4 items-start">
+                        <i data-lucide="info" class="w-4 h-4 shrink-0 text-brand-accent"></i>
+                        <span><strong>Nota de uso responsable:</strong> Este producto es 100% natural de uso cosmético y
+                            alimenticio. No es un medicamento ni sustituye tratamientos médicos profesionales.</span>
+                    </div>
+                </div>
+
+                <!-- Columna Visual -->
+                <div class="lg:w-5/12 relative min-h-[400px] group">
+                    <div
+                        class="absolute inset-x-0 inset-y-0 bg-brand-light -rotate-3 transition-transform group-hover:rotate-0 duration-700">
+                    </div>
+                    <img src="assets/coco-detalle.webp"
+                        class="absolute inset-0 w-full h-full object-cover shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
+                    <div
+                        class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-accent p-8 flex items-center justify-center text-center leading-tight font-serif italic text-brand-green z-20 shadow-xl">
+                        Saberes del Pacífico
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios: Social Proof -->
+    <section class="relative py-24 bg-white reveal overflow-hidden">
+        <!-- Fondo de Palmeras -->
+        <div class="absolute inset-0 opacity-[0.2] pointer-events-none">
+            <img src="assets/coconut_palm_footer_bg.webp" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+                <div>
+                    <span
+                        class="text-brand-brown font-bold text-sm tracking-widest uppercase mb-4 block">Confianza</span>
+                    <h2 class="text-4xl font-serif font-bold text-brand-green mb-6">Lo que dicen <br>quienes nos han
+                        probado</h2>
+                    <p class="text-gray-500 font-light">Clientes que valoran lo artesanal y la pureza del Pacífico.</p>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="p-8 bg-brand-light border-l-4 border-brand-accent">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-6">"El aroma es incomparable. Se nota que es 100% natural,
+                            nada que ver con los de supermercado."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gray-200"></div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-green">Elena Rodríguez</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest">Chef Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="p-8 bg-brand-light border-l-4 border-brand-accent">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-6">"Para mi cabello es milagroso. He buscado por años un
+                            aceite así de puro y por fin lo encontré."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gray-200"></div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-green">Sonia Gómez</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest">Cuidado Personal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso: Limpio e Informativo -->
+    <section id="proceso" class="py-24 bg-white border-t border-brand-light overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <span class="text-brand-green font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Gota a
+                        Gota</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-10 leading-tight">Del cocotero
+                        <br>a tu hogar
+                    </h2>
+
+                    <div class="space-y-12 relative">
+                        <!-- Línea decorativa vertical -->
+                        <div class="absolute left-6 top-8 bottom-8 w-[1px] bg-brand-accent/20"></div>
+
+                        <div class="flex gap-8 relative group reveal reveal-delay-1">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
+                                1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-lg">Cultivo en Tierra Propia</h4>
+                                <p class="text-gray-600 mt-2 leading-relaxed">Nuestros cocos crecen bajo el sol de Bahía
+                                    Solano, en suelos nutridos por la brisa del mar y libres de agroquímicos.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 relative group reveal reveal-delay-2">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
+                                2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-lg">Cosecha Seleccionada</h4>
+                                <p class="text-gray-600 mt-2 leading-relaxed">Solo recolectamos el coco en su punto
+                                    exacto de madurez, garantizando la máxima concentración de nutrientes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 relative group reveal reveal-delay-3">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
+                                3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-lg">Extracción Artesanal</h4>
+                                <p class="text-gray-600 mt-2 leading-relaxed">Prensado suave para obtener una leche de
+                                    coco pura que luego se decanta naturalmente para separar el aceite.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 relative group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
+                                4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-lg">Economía Circular</h4>
+                                <p class="text-gray-600 mt-2 leading-relaxed">Honramos la planta. El afrecho se
+                                    convierte en dulces típicos y los residuos vuelven a la tierra como abono orgánico.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 relative reveal">
+                    <div class="relative z-10 p-4 bg-white shadow-luxury">
+                        <img src="assets/proceso.webp"
+                            class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
+                    </div>
+                    <!-- Decoración flotante -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-green/5 rounded-full blur-3xl"></div>
+
+                    <div
+                        class="absolute -bottom-10 right-10 bg-brand-green p-10 text-white max-w-xs shadow-2xl hidden md:block">
+                        <i data-lucide="quote" class="w-8 h-8 text-brand-accent opacity-50 mb-4"></i>
+                        <p class="font-serif italic text-xl leading-relaxed">"La tierra da lo que recibe. Nosotros le
+                            damos gratitud y cuidado."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencias: Tarjetas con Foto -->
+    <section id="experiencias" class="py-24 bg-brand-green text-white relative reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-serif font-bold text-center mb-16">Vive la experiencia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div onclick="openModal('restaurante')"
+                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/experiencia-restaurante.webp"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Gastronomía
+                            Local</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Cocina Tradicional</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Sabores auténticos del Pacífico donde el coco es el alma de cada preparación.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Vivir Experiencia <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div onclick="openModal('alojamiento')"
+                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/experiencia-alojamiento.webp"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Descanso
+                            Consciente</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Alojamiento</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Relájate rodeado de naturaleza y el sonido hipnotizante del mar.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Vivir Experiencia <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div onclick="openModal('cultural')"
+                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/experiencia-cultural.webp"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Herencia
+                            y Saber</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Cultura Viva</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Conoce los saberes ancestrales y la historia que guarda nuestro territorio.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Vivir Experiencia <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fondo pattern opaco -->
+        <div
+            class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.webp')]">
+        </div>
+    </section>
+
+    <!-- Datos Útiles: Valor y Confianza -->
+
+    <!-- Modal Structure -->
+    <div id="experienceModal" class="modal-overlay items-center justify-center px-4" onclick="closeModal()">
+        <div class="modal-content shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+            <button onclick="closeModal()"
+                class="absolute top-6 right-6 z-20 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="modalBody" class="flex flex-col md:flex-row">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA: Conversión & Cierre -->
+    <section class="relative py-32 flex items-center justify-center overflow-hidden">
+        <!-- Background con parallax sutil -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/cta_dark_coconut_bg.webp" class="w-full h-full object-cover brightness-75"
+                alt="Cierre Artesanal">
+            <div class="absolute inset-0 bg-brand-green/15 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+            <div class="inline-flex items-center gap-4 mb-8">
+                <span class="w-12 h-[1px] bg-brand-accent"></span>
+                <span class="text-brand-accent font-bold tracking-[0.4em] uppercase text-sm">Tu pedido artesanal</span>
+                <span class="w-12 h-[1px] bg-brand-accent"></span>
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-10 leading-tight">
+                Lleva la pureza del Pacífico <br>directo a tu hogar
+            </h2>
+
+            <p class="text-xl md:text-2xl text-white/80 font-light mb-14 max-w-2xl mx-auto leading-relaxed">
+                Descubre por qué Jazmín Oliveros es el secreto mejor guardado para el cuidado natural y la cocina con
+                alma.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://wa.me/573147947552?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Aceite%20de%20Coco."
+                    class="group relative px-12 py-6 bg-brand-accent text-brand-green font-bold text-lg uppercase tracking-widest shadow-2xl transition-all hover:scale-105 hover:bg-white overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-3">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i> Hacer Pedido Ahora
+                    </span>
+                </a>
+                <a href="#productos"
+                    class="px-12 py-6 border border-white/30 text-white font-bold text-lg uppercase tracking-widest hover:bg-white/10 transition-all backdrop-blur-sm">
+                    Ver Catálogo
+                </a>
+            </div>
+
+            <p class="mt-12 text-white/40 text-sm tracking-widest uppercase">
+                Envíos a toda Colombia • 100% Artesanal • Garantía de Pureza
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="relative bg-white pt-24 pb-12 border-t border-gray-100 overflow-hidden">
+        <!-- Fondo Único de Palmeras -->
+        <div class="absolute inset-0 opacity-[0.2] pointer-events-none">
+            <img src="assets/coconut_palm_footer_bg.webp" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <!-- Brand & Story -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-8">
+                        <img src="aceite-de-coco-jazmin.webp" alt="Logo Jazmín Oliveros"
+                            class="h-20 w-auto object-contain">
+                    </div>
+                    <p class="text-gray-500 text-base leading-relaxed mb-8">
+                        Llevamos la esencia pura del Pacífico colombiano a tu hogar, honrando los saberes ancestrales y
+                        el respeto por la tierra.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex gap-5">
+                        <a href="https://www.instagram.com/aceite_de_coco_yasmin/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-brand-green/40 hover:text-brand-accent transition-colors">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Jazminoliveros.organicos" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-brand-green/40 hover:text-brand-accent transition-colors">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://wa.me/573147947552" target="_blank" rel="noopener noreferrer"
+                            class="text-brand-green/40 hover:text-brand-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"
+                                class="w-6 h-6">
+                                <path
+                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explorar -->
+                <div>
+                    <h4 class="font-bold text-gray-800 uppercase tracking-widest text-sm mb-8 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-brand-accent"></span> Explorar
+                    </h4>
+                    <ul class="space-y-4 text-base">
+                        <li><a href="#inicio" class="text-gray-500 hover:text-brand-green transition-colors">Inicio</a>
+                        </li>
+                        <li><a href="#historia" class="text-gray-500 hover:text-brand-green transition-colors">Nuestra
+                                Historia</a></li>
+                        <li><a href="#productos" class="text-gray-500 hover:text-brand-green transition-colors">Cosecha
+                                & Productos</a></li>
+                        <li><a href="#proceso" class="text-gray-500 hover:text-brand-green transition-colors">Proceso
+                                Artesanal</a></li>
+                        <li><a href="#experiencias"
+                                class="text-gray-500 hover:text-brand-green transition-colors">Experiencias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto & Ubicación -->
+                <div>
+                    <h4 class="font-bold text-gray-800 uppercase tracking-widest text-sm mb-8 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-brand-accent"></span> Contacto
+                    </h4>
+                    <ul class="space-y-6 text-base text-gray-600">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-brand-light p-2 rounded-sm text-brand-green">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <span class="leading-relaxed">
+                                Barrio Las Marías, El Valle<br>
+                                <span class="text-brand-brown font-medium">Bahía Solano – Chocó</span>
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="bg-brand-light p-2 rounded-sm text-brand-green">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-lg text-brand-green">314 794 7552</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Compromiso Legal -->
+                <div>
+                    <h4 class="font-bold text-gray-800 uppercase tracking-widest text-sm mb-8 flex items-center gap-2">
+                        <span class="w-4 h-[1px] bg-brand-accent"></span> Nota Legal
+                    </h4>
+                    <div class="bg-brand-light/40 p-6 border-l-2 border-brand-accent">
+                        <p class="text-xs text-gray-500 leading-relaxed italic">
+                            "Este producto es fruto de un proceso 100% natural. Su uso es cosmético y alimenticio. No es
+                            un medicamento ni sustituye tratamientos médicos profesionales."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-100 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-gray-400 font-medium tracking-wide">
+                    &copy; 2024 Aceite de Coco <span class="text-brand-green">Jazmín Oliveros</span>. Orgullosamente
+                    Chocoano.
+                </p>
+                <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-gray-400">
+                    <a href="#" class="hover:text-brand-accent transition-colors">Privacidad</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Términos</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Envíos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/573147947552" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition duration-300 flex items-center justify-center w-16 h-16 group">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-8 h-8">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+        <span
+            class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-sm ml-0 group-hover:ml-2">Contáctanos</span>
+    </a>
+
+    <!-- Botón de Volver Arriba -->
+    <button id="backToTop"
+        class="fixed bottom-24 right-6 z-40 bg-white p-3 rounded-full shadow-lg border border-gray-100 opacity-0 invisible transition-all duration-300 hover:bg-brand-light">
+        <i data-lucide="arrow-up" class="w-5 h-5 text-brand-green"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Logic
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', reveal);
+        // Initial check
+        reveal();
+
+        // Scroll Spy: Highlight active section in menu
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        });
+
+        // Back to top logic
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Modal Logic
+        const modalData = {
+            restaurante: {
+                title: "Sabores del Pacífico colombiano",
+                images: ["assets/experiencia-restaurante.webp", "assets/exp-restaurante-2.webp", "assets/exp-restaurante-3.webp"],
+                mainText: "En nuestra tierra, el coco no solo se cultiva: se cocina, se comparte y se celebra.<br><br>Nuestro restaurante ofrece comida tradicional del Pacífico colombiano, preparada de manera artesanal con ingredientes locales y recetas que hacen parte de la memoria cultural del territorio. El coco es protagonista en muchas de nuestras preparaciones, aportando sabor, identidad y tradición.",
+                extraText: "Cada plato refleja una forma de vivir y entender el Pacífico: sencilla, auténtica y profundamente conectada con la naturaleza.",
+                points: ["Cocina tradicional del Pacífico colombiano", "Ingredientes locales y preparaciones artesanales", "Uso del coco como ingrediente esencial", "Ambiente natural y tranquilo", "Experiencia gastronómica auténtica"],
+                idealFor: ["Visitantes que desean conocer la cocina del Pacífico", "Personas interesadas en experiencias culturales reales", "Amantes de la gastronomía tradicional"],
+                cta: "Quiero conocer el restaurante",
+                wa: "Hola, quiero información sobre el restaurante en Bahía Solano."
+            },
+            alojamiento: {
+                title: "Descanso en la tierra del coco",
+                images: ["assets/experiencia-alojamiento.webp", "assets/exp-alojamiento-2.webp", "assets/exp-alojamiento-3.webp"],
+                mainText: "Nuestro alojamiento está ubicado en un entorno natural, rodeado de vegetación y tranquilidad, pensado para quienes buscan desconectarse del ritmo acelerado y reconectarse con la naturaleza.<br><br>Aquí podrás descansar en un espacio sencillo y acogedor, despertar con los sonidos del Pacífico y vivir de cerca el día a día del territorio donde nace Aceite de Coco Jazmín Oliveros.",
+                extraText: "Más que hospedarse, es una invitación a vivir el Pacífico de una manera consciente y cercana.",
+                points: ["Alojamiento en entorno natural", "Ambiente tranquilo y relajado", "Conexión directa con la tierra y el territorio", "Cercanía al proceso artesanal del coco"],
+                idealFor: ["Viajeros conscientes", "Personas que buscan descanso y naturaleza", "Visitantes interesados en experiencias locales"],
+                cta: "Quiero información sobre el alojamiento",
+                wa: "Hola, quiero conocer opciones de alojamiento."
+            },
+            cultural: {
+                title: "Vive el territorio y sus saberes",
+                images: ["assets/experiencia-cultural.webp", "assets/exp-cultural-2.webp", "assets/exp-cultural-3.webp"],
+                mainText: "Quienes nos visitan pueden conocer de cerca el cultivo del coco, el proceso artesanal de producción del aceite, la cocina tradicional y la relación profunda entre la tierra, la comunidad y los saberes ancestrales.<br><br>Esta experiencia permite entender que detrás de cada producto hay una historia, un territorio y una forma de vivir que se transmite de generación en generación.",
+                extraText: "Es una vivencia auténtica del Pacífico colombiano, basada en el respeto por la naturaleza y la cultura local.",
+                points: ["Conocer el cultivo y la tierra del coco", "Entender el proceso artesanal de producción", "Acercarte a la cocina y cultura del Pacífico", "Aprender sobre prácticas tradicionales y sostenibles"],
+                idealFor: ["Personas interesadas en cultura y territorio", "Visitantes que buscan experiencias auténticas", "Turismo consciente y responsable"],
+                cta: "Quiero vivir esta experiencia",
+                wa: "Hola, quiero vivir la experiencia cultural del coco."
+            }
+        };
+
+        function openModal(id) {
+            const data = modalData[id];
+            const modalOverlay = document.getElementById('experienceModal');
+            const body = document.getElementById('modalBody');
+
+            // Forzar layout de flex
+            body.className = "flex flex-col md:flex-row w-full h-full min-h-0 overflow-hidden";
+
+            body.innerHTML = `
+                <!-- Zona Galería (Izquierda en Desktop) -->
+                <div class="md:w-1/2 flex flex-col bg-gray-50 h-[400px] md:h-auto border-b md:border-b-0 md:border-r border-gray-100 shrink-0">
+                    <div class="relative flex-grow overflow-hidden bg-black/5">
+                        <img id="mainModalImg" src="${data.images[0]}" class="w-full h-full object-cover transition-opacity duration-300">
+                    </div>
+                    <!-- Miniaturas: Más grandes y siempre visibles -->
+                    <div class="p-6 bg-white flex justify-center gap-4 border-t border-gray-100">
+                        ${data.images.map((img, idx) => `
+                            <div onclick="changeModalImg('${img}', this)" 
+                                 class="w-20 h-20 cursor-pointer overflow-hidden border-2 transition-all hover:opacity-100 opacity-60 rounded-sm ${idx === 0 ? 'thumb-active border-brand-accent shadow-lg' : 'border-transparent'}">
+                                <img src="${img}" class="w-full h-full object-cover">
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Zona Contenido (Derecha en Desktop) -->
+                <div class="md:w-1/2 flex flex-col min-h-0 bg-white">
+                    <div class="modal-scrollable p-8 md:p-14 overflow-y-auto flex-grow">
+                        <div class="mb-10">
+                            <span class="text-brand-brown text-sm tracking-[0.4em] uppercase mb-4 block font-bold opacity-60">Experiencia Local</span>
+                            <h2 class="text-3xl md:text-5xl font-serif font-bold text-brand-green mb-6 leading-[1.1]">${data.title}</h2>
+                            <div class="w-16 h-1.5 bg-brand-accent mb-10"></div>
+                            
+                            <p class="text-lg leading-relaxed text-gray-600 font-light mb-8">${data.mainText}</p>
+                            
+                            <div class="bg-brand-light/50 border-l-4 border-brand-accent p-6 italic text-gray-500 text-lg mb-12">
+                                "${data.extraText}"
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-12">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-4">
+                                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i> Qué incluye
+                                    </h4>
+                                    <ul class="space-y-4">
+                                        ${data.points.map(p => `
+                                            <li class="flex items-start gap-4 text-base text-gray-600">
+                                                <i data-lucide="check" class="w-4 h-4 text-brand-green mt-1 shrink-0"></i>
+                                                <span>${p}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-4">
+                                        <i data-lucide="users" class="w-4 h-4 text-brand-brown"></i> Ideal para
+                                    </h4>
+                                    <ul class="space-y-4">
+                                        ${data.idealFor.map(p => `
+                                            <li class="flex items-start gap-4 text-base text-gray-600">
+                                                <i data-lucide="star" class="w-4 h-4 text-brand-accent mt-1 shrink-0"></i>
+                                                <span>${p}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="p-8 md:p-10 border-t border-gray-100 bg-gray-50 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.03)] z-10">
+                        <a href="https://wa.me/573147947552?text=${encodeURIComponent(data.wa)}" target="_blank"
+                           class="group relative flex items-center justify-center gap-4 w-full py-6 bg-brand-green text-white font-bold tracking-[0.2em] uppercase overflow-hidden shadow-xl transition-all hover:bg-green-800 hover:shadow-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                            </svg>
+                            <span class="relative z-10">${data.cta}</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+            modalOverlay.classList.add('active');
+            lucide.createIcons();
+            document.body.style.overflow = 'hidden';
+
+            // Importante: reset del scroll
+            const scrollArea = body.querySelector('.modal-scrollable');
+            if (scrollArea) scrollArea.scrollTop = 0;
+        }
+
+        function changeModalImg(src, thumbContainer) {
+            const mainImg = document.getElementById('mainModalImg');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+
+            const thumbs = thumbContainer.parentElement.querySelectorAll('div');
+            thumbs.forEach(t => {
+                t.classList.remove('thumb-active', 'border-brand-accent', 'shadow-lg');
+                t.classList.add('border-transparent');
+            });
+            thumbContainer.classList.remove('border-transparent');
+            thumbContainer.classList.add('thumb-active', 'border-brand-accent', 'shadow-lg');
+        }
+
+        function closeModal() {
+            document.getElementById('experienceModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+
+</html>
