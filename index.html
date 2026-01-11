@@ -1487,14 +1487,23 @@
             addMessage(text, 'user');
             chatInput.value = '';
 
-            // Respuesta simulada (Demo)
+            // Respuesta simulada (Demo) con Saberes Reales
             setTimeout(() => {
-                let response = "¡Qué buena pregunta! Como estamos en fase de prueba, aún estoy aprendiendo a responderte por aquí. Pero si quieres, escríbenos al WhatsApp y yo misma te doy ese consejo. 🥥✨";
+                const lowerText = text.toLowerCase();
+                let response = "¡Qué buena pregunta! Como estamos en el proceso de cargar todos mis saberes, aún estoy aprendiendo a responderte sobre ese tema específico. Pero si quieres, escríbenos al WhatsApp y yo misma te ayudo. 🥥✨";
 
-                if (text.toLowerCase().includes('hola')) {
-                    response = "¡Hola! Qué gusto saludarte. ¿En qué ritual de belleza puedo ayudarte hoy?";
-                } else if (text.toLowerCase().includes('cabello') || text.toLowerCase().includes('pelo')) {
-                    response = "Para el cabello, te recomiendo mi ritual favorito: aplica aceite de coco tibio de medios a puntas, déjalo actuar 30 minutos y lava normal. ¡Verás el brillo natural! ✨🌴";
+                if (lowerText.includes('hola')) {
+                    response = "¡Hola! Qué gusto saludarte. Soy Jazmín. ¿En qué ritual de belleza o secreto del Pacífico puedo ayudarte hoy? 🌴💚";
+                } else if (lowerText.includes('cabello') || lowerText.includes('pelo')) {
+                    response = "Para el cabello, el Aceite Yasmín es una bendición. Fortalece y nutre reduciendo el encrespamiento. Mi ritual: aplica aceite tibio de medios a puntas, déjalo 30 min y lava normal. ¡Verás el brillo natural! ✨";
+                } else if (lowerText.includes('mascota') || lowerText.includes('perro') || lowerText.includes('sarna') || lowerText.includes('animal')) {
+                    response = "¡Las mascotas también son parte de la familia! Si tienen sarna o piel irritada, aplícales aceite en la parte afectada. Verás cómo recuperan su piel en unos 5 días. Es un remedio natural maravilloso. 🐾🐶";
+                } else if (lowerText.includes('piel') || lowerText.includes('cara') || lowerText.includes('hidratar')) {
+                    response = "El aceite penetra fácilmente proporcionando hidratación profunda y duradera. Es rico en antioxidantes y vitaminas. Ideal para calmar piel irritada o simplemente mantenerla suave y joven. 🥥✨";
+                } else if (lowerText.includes('cocinar') || lowerText.includes('comer') || lowerText.includes('cocina')) {
+                    response = "¡Claro! Mi aceite es prensado en frío, sin aditivos ni conservantes. Es perfecto para cocinar y darle ese aroma y sabor auténtico del coco a tus platos del Pacífico. 🥘🌴";
+                } else if (lowerText.includes('natural') || lowerText.includes('quimico') || lowerText.includes('puro')) {
+                    response = "Mi aceite es 100% natural, obtenido de la pulpa fresca del coco. Usamos prensado en frío para preservar todas las vitaminas y ácidos grasos esenciales. Sin una gota de químicos. 🌿🥥";
                 }
 
                 addMessage(response, 'jazmin');
