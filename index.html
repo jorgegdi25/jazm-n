@@ -582,13 +582,26 @@
 
     <!-- Hero: Imagen Natural y Fresca -->
     <header id="inicio" class="relative h-[90vh] flex items-center bg-brand-light overflow-hidden">
-        <div class="absolute inset-0 z-0 scale-105 animate-fade-in">
-            <!-- Imagen de fondo luminosa (palmeras/playa/cocos) -->
-            <img src="assets/hero.webp" class="w-full h-full object-cover">
-            <!-- Overlay degradado para profundidad -->
-            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
-            <!-- Sutil viñeta -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-green/5"></div>
+        <div id="hero-slider" class="absolute inset-0 z-0 scale-105">
+            <!-- Slide 1 (New) -->
+            <div class="absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out slider-slide">
+                <img src="assets/hero-slide-1.jpg" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out slider-slide">
+                <img src="assets/hero-slide-2.jpg" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
+            </div>
+            <!-- Slide 3 (User Selection) -->
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out slider-slide">
+                <img src="freepik__hacer-la-imagen-donde-los-productos-se-ven-la-dere__2917.jpeg"
+                    class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
+            </div>
+
+            <!-- Sutil viñeta (Global) -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-green/5 z-10"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -731,179 +744,219 @@
             </div>
 
             <!-- Grid de Productos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <!-- Producto 1 -->
+                <!-- Producto 1: 1 Litro -->
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden relative reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/aceite-puro.webp"
+                        <img src="assets/botella-1l.png"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
-                        <div class="absolute top-6 left-6 flex flex-col gap-2">
+                        <div class="absolute top-4 left-4">
                             <span
-                                class="bg-brand-green text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Alimenticio</span>
+                                class="bg-brand-green text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">Familiar</span>
                         </div>
                     </div>
-                    <div class="p-10 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Aceite de Coco Puro</h3>
-                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Prensado en frío, ideal para realzar el
-                            sabor de tus recetas con la pureza del Pacífico.</p>
-                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Aceite%20de%20Coco%20Puro%20Alimenticio."
-                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-green border border-brand-green text-sm font-bold uppercase tracking-widest transition-all shadow-md">
-                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">Aceite de Coco (1L)</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">Nuestra presentación más
+                            generosa para uso diario y cocina.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20presentación%20de%201%20Litro."
+                            class="btn-liquid w-full flex items-center justify-center gap-2 px-4 py-2 bg-white text-brand-green border border-brand-green text-xs font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-3 h-3"></i> Pedir 1L
                         </a>
                     </div>
                 </div>
 
-                <!-- Producto 2 -->
+                <!-- Producto 2: Spray 60ml -->
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-1">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/aceite-cosmetico.webp"
+                        <img src="assets/spray-60ml.png"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
-                        <div class="absolute top-6 left-6">
+                        <div class="absolute top-4 left-4">
                             <span
-                                class="bg-brand-brown text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Cosmético</span>
+                                class="bg-brand-brown text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">Cosmético</span>
                         </div>
                     </div>
-                    <div class="p-10 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Aceite Cosmético</h3>
-                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Hidratación profunda para piel de seda y
-                            cabello radiante. 100% natural, sin aditivos.</p>
-                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Aceite%20de%20Coco%20Cosmético."
-                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-brown border border-brand-brown text-sm font-bold uppercase tracking-widest transition-all shadow-md">
-                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">Spray (60ml)</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">Perfecto para llevar.
+                            Hidratación limpia y práctica en todo momento.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Spray%20de%2060ml."
+                            class="btn-liquid w-full flex items-center justify-center gap-2 px-4 py-2 bg-white text-brand-brown border border-brand-brown text-sm font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-3 h-3"></i> Pedir Spray
                         </a>
                     </div>
                 </div>
 
-                <!-- Producto 3 -->
+                <!-- Producto 3: Frasco 250ml -->
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-2">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/infusion-vainilla.webp"
+                        <img src="assets/frasco-250ml.png"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
-                        <div class="absolute top-6 left-6">
+                        <div class="absolute top-4 left-4">
                             <span
-                                class="bg-brand-accent text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Edición
-                                Especial</span>
+                                class="bg-brand-accent text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">Artesanal</span>
                         </div>
                     </div>
-                    <div class="p-10 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Infusión Vainilla</h3>
-                        <p class="text-gray-600 text-base mb-6 leading-relaxed">El aroma dulce de la vainilla se fusiona
-                            con el coco para una experiencia sensorial única.</p>
-                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20Infusión%20de%20Vainilla."
-                            class="btn-liquid inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-brand-accent border border-brand-accent text-sm font-bold uppercase tracking-widest transition-all shadow-md">
-                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">Frasco (250ml)</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">Envase tradicional con tapa
+                            de yute y etiqueta artesanal.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20el%20Frasco%20Artesanal%20de%20250ml."
+                            class="btn-liquid w-full flex items-center justify-center gap-2 px-4 py-2 bg-white text-brand-accent border border-brand-accent text-sm font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-3 h-3"></i> Pedir Frasco
                         </a>
                     </div>
                 </div>
 
-                <!-- Producto 4 (Crema) -->
+                <!-- Producto 4: Crema de Peinar -->
                 <div
-                    class="bg-white group hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
+                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-3">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/crema-peinar.webp"
+                        <img src="assets/crema-peinar.png"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
-                        <div class="absolute top-6 left-6">
+                        <div class="absolute top-4 left-4">
                             <span
-                                class="bg-brand-green text-white text-xs font-bold px-4 py-1.5 uppercase tracking-widest shadow-md">Cuidado
-                                Capilar</span>
+                                class="bg-brand-green text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">Capilar</span>
                         </div>
                     </div>
-                    <div class="p-10 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-gray-800 mb-3">Crema para Peinar</h3>
-                        <p class="text-gray-600 text-base mb-6 leading-relaxed">Formulada con aceite puro para nutrir,
-                            desenredar y dar brillo natural a tu cabello.</p>
-                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20Crema%20para%20Peinar."
-                            class="inline-flex items-center gap-2 px-8 py-3 bg-brand-green text-white text-sm font-bold uppercase tracking-widest hover:bg-green-800 transition-colors shadow-lg">
-                            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Pedir por WhatsApp
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">Crema de Peinar</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">Nutrición profunda para el
+                            cabello con la fuerza del coco natural.</p>
+                        <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20la%20Crema%20de%20Peinar."
+                            class="btn-liquid w-full flex items-center justify-center gap-2 px-4 py-2 bg-white text-brand-green border border-brand-green text-xs font-bold uppercase tracking-widest transition-all shadow-md">
+                            <i data-lucide="shopping-cart" class="w-3 h-3"></i> Pedir Crema
                         </a>
                     </div>
                 </div>
-
-                <!-- Sección Dulces (Doble Ancho en LG) -->
-                <div
-                    class="lg:col-span-2 bg-brand-green text-white p-10 md:p-16 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden group reveal">
-                    <!-- Textura de fondo sutil -->
-                    <div
-                        class="absolute inset-0 opacity-5 bg-palm-pattern group-hover:scale-105 transition-transform duration-1000">
-                    </div>
-
-                    <div class="relative z-10 lg:w-1/2 flex flex-col justify-center">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="w-8 h-[1px] bg-brand-accent"></span>
-                            <span class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase">Recetas con
-                                Alma</span>
-                        </div>
-                        <h3 class="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">Delicias de la
-                            <br><span class="text-brand-accent italic">Abuela</span>
-                        </h3>
-                        <p class="text-gray-200 text-lg mb-10 leading-relaxed font-light max-w-md">
-                            El afrecho del coco y las frutas locales de Bahía Solano transformados artesanalmente en
-                            sabores que cuentan nuestra historia.
-                        </p>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-base">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
-                                    <span>Cocadas con Frutas</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-base">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
-                                    <span>Chicharrón de Coco</span>
-                                </li>
-                            </ul>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-base">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
-                                    <span>Conservas Naturales</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-base">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
-                                    <span>Miel de Coco</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <a href="https://wa.me/573147947552?text=Hola!%20Quiero%20conocer%20la%20variedad%20de%20dulces%20artesanales."
-                            class="group relative inline-flex items-center gap-4 px-10 py-5 bg-white text-brand-green font-bold text-sm uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-accent hover:text-brand-green transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"
-                                class="w-5 h-5">
-                                <path
-                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                            </svg>
-                            Consultar Sabores
-                        </a>
-                    </div>
-
-                    <!-- Composición de Imágenes (Collage Diseñado) -->
-                    <div class="relative z-10 lg:w-1/2 flex items-center justify-center p-4">
-                        <div class="relative w-full aspect-square max-w-lg">
-                            <!-- Foto principal (atrás) -->
-                            <div
-                                class="absolute top-0 right-0 w-4/5 aspect-square border-8 border-white shadow-2xl rotate-2 overflow-hidden transition-transform duration-700 group-hover:rotate-0">
-                                <img src="assets/cocadas.webp" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-brand-green/10"></div>
-                            </div>
-                            <!-- Foto secundaria (superpuesta adelante) -->
-                            <div
-                                class="absolute bottom-0 left-0 w-3/5 aspect-square border-8 border-white shadow-2xl -rotate-3 overflow-hidden transition-transform duration-700 group-hover:-rotate-1">
-                                <img src="assets/chicharron-coco.webp" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-brand-brown/10"></div>
-                            </div>
-                            <!-- Elemento decorativo -->
-                            <div
-                                class="absolute -top-4 -left-4 bg-brand-accent text-brand-green p-4 font-serif italic text-xl shadow-lg z-20">
-                                100% Hecho a Mano
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Colección Completa: Apoyo Visual -->
+            <div class="mt-20 bg-white shadow-luxury p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 reveal">
+                <div class="lg:w-3/5">
+                    <div class="relative group overflow-hidden shadow-2xl">
+                        <img src="assets/coleccion-completa.png" alt="Colección Completa Jazmín Oliveros"
+                            class="w-full h-auto transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-green/20 to-transparent"></div>
+                    </div>
+                </div>
+                <div class="lg:w-2/5">
+                    <span class="text-brand-brown font-bold text-sm tracking-widest uppercase mb-4 block">La Colección
+                        Completa</span>
+                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-brand-green mb-6 leading-tight">Ritual
+                        Completo de Bienestar</h3>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed font-light">
+                        Todas nuestras presentaciones están diseñadas para trabajar en armonía. Desde el cuidado
+                        capilar profundo hasta el toque secreto en tu cocina.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-accent"></i>
+                            <span>Tradición ancestral en cada envase</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-accent"></i>
+                            <span>Pureza 100% garantizada</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-700">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-accent"></i>
+                            <span>Sostenibilidad y respeto al territorio</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/573147947552?text=Hola!%20Me%20interesa%20conocer%20toda%20la%20colección%20de%20Jazmín%20Oliveros."
+                        class="btn-liquid inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-green text-white text-sm font-bold uppercase tracking-widest transition-all shadow-xl">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i> Pedir Colección
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección Dulces (Doble Ancho en LG) -->
+            <div
+                class="lg:col-span-2 bg-brand-green text-white p-10 md:p-16 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden group reveal">
+                <!-- Textura de fondo sutil -->
+                <div
+                    class="absolute inset-0 opacity-5 bg-palm-pattern group-hover:scale-105 transition-transform duration-1000">
+                </div>
+
+                <div class="relative z-10 lg:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-8 h-[1px] bg-brand-accent"></span>
+                        <span class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase">Recetas con
+                            Alma</span>
+                    </div>
+                    <h3 class="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">Delicias de la
+                        <br><span class="text-brand-accent italic">Abuela</span>
+                    </h3>
+                    <p class="text-gray-200 text-lg mb-10 leading-relaxed font-light max-w-md">
+                        El afrecho del coco y las frutas locales de Bahía Solano transformados artesanalmente en
+                        sabores que cuentan nuestra historia.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-base">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                <span>Chicharrón de Coco</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-base">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                <span>Cocada de Piña</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-base">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                <span>Frutos de la Finca</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-base">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-brand-accent opacity-70"></i>
+                                <span>Cocada de Maracuyá</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/573147947552?text=Hola!%20Quiero%20conocer%20la%20variedad%20de%20dulces%20artesanales."
+                        class="group relative inline-flex items-center gap-4 px-10 py-5 bg-white text-brand-green font-bold text-sm uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-accent hover:text-brand-green transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"
+                            class="w-5 h-5">
+                            <path
+                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                        </svg>
+                        Consultar Sabores
+                    </a>
+                </div>
+
+                <!-- Composición de Imágenes (Collage Diseñado) -->
+                <div class="relative z-10 lg:w-1/2 flex items-center justify-center p-4">
+                    <div class="relative w-full aspect-square max-w-lg">
+                        <!-- Foto principal (atrás) -->
+                        <div
+                            class="absolute top-0 right-0 w-4/5 aspect-square border-8 border-white shadow-2xl rotate-2 overflow-hidden transition-transform duration-700 group-hover:rotate-0">
+                            <img src="assets/frutos-finca.png" alt="Frutos de la Finca"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-brand-green/10"></div>
+                        </div>
+                        <!-- Foto secundaria (superpuesta adelante) -->
+                        <div
+                            class="absolute bottom-0 left-0 w-3/5 aspect-square border-8 border-white shadow-2xl -rotate-3 overflow-hidden transition-transform duration-700 group-hover:-rotate-1">
+                            <img src="assets/chicharron-coco.png" alt="Chicharrón de Coco"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-brand-brown/10"></div>
+                        </div>
+                        <!-- Elemento decorativo -->
+                        <div
+                            class="absolute -top-4 -left-4 bg-brand-accent text-brand-green p-4 font-serif italic text-xl shadow-lg z-20">
+                            100% Hecho a Mano
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </div>
     </section>
 
@@ -1124,7 +1177,7 @@
                 </div>
                 <div class="order-1 lg:order-2 relative reveal">
                     <div class="relative z-10 p-4 bg-white shadow-luxury">
-                        <img src="assets/proceso.webp"
+                        <img src="assets/cultivos-coco.png" alt="Cultivos de Coco Jazmín Oliveros"
                             class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
                     </div>
                     <!-- Decoración flotante -->
@@ -1146,11 +1199,11 @@
     <section id="experiencias" class="py-24 bg-brand-green text-white relative reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-4xl font-serif font-bold text-center mb-16">Vive la experiencia</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
                 <!-- Card 1 -->
                 <div onclick="openModal('restaurante')"
-                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/experiencia-restaurante.webp"
+                    class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/experiencia-restaurante.png"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1170,8 +1223,8 @@
                 </div>
                 <!-- Card 2 -->
                 <div onclick="openModal('alojamiento')"
-                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/experiencia-alojamiento.webp"
+                    class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/alojamiento-real-1.jpeg"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1189,10 +1242,10 @@
                         </span>
                     </div>
                 </div>
-                <!-- Card 3 -->
+                <!-- Card 3: Cultura y Saberes -->
                 <div onclick="openModal('cultural')"
-                    class="relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/experiencia-cultural.webp"
+                    class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/experiencia-cultural.png"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1202,11 +1255,93 @@
                         <h3 class="text-3xl font-bold mb-4 font-serif">Cultura Viva</h3>
                         <p
                             class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                            Conoce los saberes ancestrales y la historia que guarda nuestro territorio.
+                            Descubre los frutos de nuestra tierra y la historia que guarda cada cosecha.
                         </p>
                         <span
                             class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
                             Vivir Experiencia <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 4: Destino Bahía Solano -->
+                <div onclick="openModal('bahia')"
+                    class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/mapa-destino.png"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">¿Cómo
+                            llegar?</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">El Destino</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Descubre cómo llegar a nuestro paraíso desde Medellín o Pereira.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Ver Mapa <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 5: Sitios Turísticos -->
+                <div onclick="openModal('sitios')"
+                    class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/utria.jpeg"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Imperdibles</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Sitios Turísticos</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Cascadas, selva y playas que parecen sacadas de un sueño.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Descubrir <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 6: Ballenas -->
+                <div onclick="openModal('ballenas')"
+                    class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/ballena.png"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Julio
+                            - Octubre</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Avistamiento</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            Siente la magia de las ballenas jorobadas en nuestras costas.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Más Info <i data-lucide="waves" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Card 7: Naturaleza -->
+                <div onclick="openModal('naturaleza')"
+                    class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
+                    <img src="assets/frutos-finca.png"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                        <span
+                            class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Desconexión</span>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Naturaleza Pura</h3>
+                        <p
+                            class="text-gray-300 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                            El contacto real con la selva y el mar para silenciar la ciudad.
+                        </p>
+                        <span
+                            class="text-brand-accent text-sm font-bold tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Vivir la Paz <i data-lucide="leaf" class="w-4 h-4"></i>
                         </span>
                     </div>
                 </div>
@@ -1217,6 +1352,8 @@
             class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.webp')]">
         </div>
     </section>
+
+
 
     <!-- Datos Útiles: Valor y Confianza -->
 
@@ -1585,7 +1722,7 @@
         const modalData = {
             restaurante: {
                 title: "Sabores del Pacífico colombiano",
-                images: ["assets/experiencia-restaurante.webp", "assets/exp-restaurante-2.webp", "assets/exp-restaurante-3.webp"],
+                images: ["assets/experiencia-restaurante.png", "assets/exp-restaurante-2.png", "assets/exp-restaurante-3.png"],
                 mainText: "En nuestra tierra, el coco no solo se cultiva: se cocina, se comparte y se celebra.<br><br>Nuestro restaurante ofrece comida tradicional del Pacífico colombiano, preparada de manera artesanal con ingredientes locales y recetas que hacen parte de la memoria cultural del territorio. El coco es protagonista en muchas de nuestras preparaciones, aportando sabor, identidad y tradición.",
                 extraText: "Cada plato refleja una forma de vivir y entender el Pacífico: sencilla, auténtica y profundamente conectada con la naturaleza.",
                 points: ["Cocina tradicional del Pacífico colombiano", "Ingredientes locales y preparaciones artesanales", "Uso del coco como ingrediente esencial", "Ambiente natural y tranquilo", "Experiencia gastronómica auténtica"],
@@ -1595,7 +1732,7 @@
             },
             alojamiento: {
                 title: "Descanso en la tierra del coco",
-                images: ["assets/experiencia-alojamiento.webp", "assets/exp-alojamiento-2.webp", "assets/exp-alojamiento-3.webp"],
+                images: ["assets/alojamiento-real-1.jpeg", "assets/alojamiento-real-2.jpeg", "assets/alojamiento-real-3.jpeg"],
                 mainText: "Nuestro alojamiento está ubicado en un entorno natural, rodeado de vegetación y tranquilidad, pensado para quienes buscan desconectarse del ritmo acelerado y reconectarse con la naturaleza.<br><br>Aquí podrás descansar en un espacio sencillo y acogedor, despertar con los sonidos del Pacífico y vivir de cerca el día a día del territorio donde nace Aceite de Coco Jazmín Oliveros.",
                 extraText: "Más que hospedarse, es una invitación a vivir el Pacífico de una manera consciente y cercana.",
                 points: ["Alojamiento en entorno natural", "Ambiente tranquilo y relajado", "Conexión directa con la tierra y el territorio", "Cercanía al proceso artesanal del coco"],
@@ -1605,13 +1742,53 @@
             },
             cultural: {
                 title: "Vive el territorio y sus saberes",
-                images: ["assets/experiencia-cultural.webp", "assets/exp-cultural-2.webp", "assets/exp-cultural-3.webp"],
-                mainText: "Quienes nos visitan pueden conocer de cerca el cultivo del coco, el proceso artesanal de producción del aceite, la cocina tradicional y la relación profunda entre la tierra, la comunidad y los saberes ancestrales.<br><br>Esta experiencia permite entender que detrás de cada producto hay una historia, un territorio y una forma de vivir que se transmite de generación en generación.",
-                extraText: "Es una vivencia auténtica del Pacífico colombiano, basada en el respeto por la naturaleza y la cultura local.",
+                images: ["assets/experiencia-cultural.png", "assets/exp-cultural-2.png", "assets/exp-cultural-3.png", "assets/frutos-finca.png"],
+                mainText: "Nuestra finca es un ecosistema vivo donde el coco convive con piñas, maracuyás y cítricos que luego transformamos en nuestras famosas Cocadas. Quienes nos visitan pueden conocer el ciclo de la tierra, el proceso artesanal y la biodiversidad del Pacífico.<br><br>Entenderás que detrás de cada producto hay un territorio vibrante y una forma de vivir que respeta los tiempos de la naturaleza.",
+                extraText: "Es una inmersión auténtica en el corazón productivo del Pacífico colombiano.",
                 points: ["Conocer el cultivo y la tierra del coco", "Entender el proceso artesanal de producción", "Acercarte a la cocina y cultura del Pacífico", "Aprender sobre prácticas tradicionales y sostenibles"],
                 idealFor: ["Personas interesadas en cultura y territorio", "Visitantes que buscan experiencias auténticas", "Turismo consciente y responsable"],
                 cta: "Quiero vivir esta experiencia",
                 wa: "Hola, quiero vivir la experiencia cultural del coco."
+            },
+            bahia: {
+                title: "¿Cómo Llegar?",
+                images: ["assets/mapa-destino.png", "assets/destino-1.jpg", "assets/destino-2.jpg", "assets/destino-3.jpg"],
+                mainText: "Bahía Solano te espera con los brazos abiertos. La forma más fácil y rápida de visitarnos es a través de un vuelo directo de aproximadamente 45 minutos desde el **Aeropuerto Olaya Herrera en Medellín** o desde **Pereira**.<br><br>Es un viaje corto que te traslada de la ciudad directamente al corazón de la selva chocoana.<br><br><a href='https://www.google.com/maps/place/Bah%C3%ADa+Solano,+Choc%C3%B3/@6.2230113,-77.4107147,13z' target='_blank' class='text-brand-green font-bold flex items-center gap-2 hover:underline underline-offset-4'><i data-lucide='map-pin' class='w-4 h-4'></i> Ver ubicación en Google Maps</a>",
+                extraText: "Un vuelo corto hacia una experiencia que recordarás toda la vida.",
+                points: ["Vuelos desde Medellín (Olaya Herrera)", "Vuelos desde Pereira", "Trayecto de 45 minutos", "Llegada directa a la selva"],
+                idealFor: ["Viajeros de Medellín y el Eje Cafetero", "Personas que buscan rapidez y comodidad", "Aventureros ansiosos por la selva"],
+                cta: "Consultar vuelos",
+                wa: "Hola, me gustaría saber más sobre cómo viajar a Bahía Solano."
+            },
+            sitios: {
+                title: "Tesoros por Descubrir",
+                images: ["assets/utria.jpeg", "assets/jardin-botanico.jpeg", "assets/selva-virgen.jpeg", "assets/tesoro-4.jpg", "assets/tesoro-5.jpg", "assets/tesoro-6.jpg"],
+                mainText: "Bahía Solano guarda lugares que parecen sacados de un sueño. No puedes irte sin visitar las majestuosas **Cascadas de Nabugá**, bañarte en las aguas tranquilas y cristalinas de **Playa Huina**, o perderte en la inmensa biodiversidad del **Jardín Botánico del Pacífico** y el **Parque Nacional Natural Utría**.",
+                extraText: "Cada sitio es una oportunidad para entender por qué este rincón del mundo es único.",
+                points: ["Cascadas de Nabugá (Agua dulce y mar)", "Playa Huina (Tranquilidad total)", "Jardín Botánico del Pacífico", "Parque Nacional Natural Utría", "Senderos de Selva Virgen"],
+                idealFor: ["Amantes de las caminatas y el agua", "Fotógrafos de naturaleza", "Exploradores de lugares vírgenes"],
+                cta: "Quiero conocer estos sitios",
+                wa: "Hola, quiero información sobre los tours y sitios turísticos en Bahía Solano."
+            },
+            ballenas: {
+                title: "El Canto de las Gigantes",
+                images: ["assets/ballena.png", "assets/experiencia-restaurante.png"],
+                mainText: "Entre **julio y octubre**, nuestras aguas se convierten en el escenario de uno de los espectáculos más bellos del planeta: la llegada de las ballenas jorobadas. <br><br>Sentir su presencia y verlas saltar desde nuestra zona de producción es una experiencia que nos conecta con la fuerza vital de la naturaleza.",
+                extraText: "Es una temporada de magia donde el mar cobra una vida espectacular.",
+                points: ["Temporada: Julio a Octubre", "Avistamiento responsable", "Cercanía a la costa", "Vínculo con el ciclo natural"],
+                idealFor: ["Amantes de la vida marina", "Familias con niños", "Cualquier persona que busque una conexión mística"],
+                cta: "Información temporada",
+                wa: "Hola, quiero saber más sobre la temporada de ballenas y cómo verlas."
+            },
+            naturaleza: {
+                title: "Naturaleza y Silencio",
+                images: ["assets/frutos-finca.png", "assets/cultivos-coco.png"],
+                mainText: "Para quien busca silenciar el ruido de la ciudad, el Chocó es el 'reset' perfecto. El contacto directo con la selva virgen, sentir la humedad del bosque y escuchar solo el susurro de las olas es medicina para el alma.",
+                extraText: "Aquí el silencio es profundo y la vida se siente en cada respiro.",
+                points: ["Desconexión digital total", "Aire puro y selva virgen", "Sonidos naturales (Mar y Aves)", "Reconexión espiritual"],
+                idealFor: ["Personas estresadas de la ciudad", "Buscadores de retiros espirituales", "Amantes del silencio"],
+                cta: "Vivir la paz",
+                wa: "Hola, busco un espacio de desconexión y naturaleza en Bahía Solano."
             }
         };
 
@@ -1726,7 +1903,22 @@
             document.getElementById('experienceModal').classList.remove('active');
             document.body.style.overflow = '';
         }
+
+        // Hero Slider Logic
+        const slides = document.querySelectorAll('.slider-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+        }
+
+        if (slides.length > 0) {
+            setInterval(nextSlide, 5000); // Change every 5 seconds
+        }
     </script>
+
 </body>
 
 </html>
