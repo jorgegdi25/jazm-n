@@ -585,12 +585,12 @@
         <div id="hero-slider" class="absolute inset-0 z-0 scale-105">
             <!-- Slide 1 (New) -->
             <div class="absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out slider-slide">
-                <img src="assets/hero-slide-1.jpg" class="w-full h-full object-cover object-center">
+                <img src="assets/hero-slide-1.webp" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
             </div>
             <!-- Slide 2 -->
             <div class="absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out slider-slide">
-                <img src="assets/hero-slide-2.jpg" class="w-full h-full object-cover object-center">
+                <img src="assets/hero-slide-2.webp" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
             </div>
             <!-- Slide 3 (User Selection) -->
@@ -683,7 +683,7 @@
                     <div
                         class="aspect-[4/5] bg-gray-100 relative z-10 p-4 border border-white shadow-luxury transition-all duration-700 group-hover:rotate-0 rotate-2">
                         <!-- Foto Jazmín (Placeholder) -->
-                        <img src="assets/jazmin-retrato.png" class="w-full h-full object-cover filter brightness-95">
+                        <img src="assets/jazmin-retrato.webp" class="w-full h-full object-cover filter brightness-95">
                         <div
                             class="absolute bottom-10 left-10 right-10 bg-white/95 backdrop-blur-sm p-6 text-center shadow-lg border-t-2 border-brand-accent">
                             <p class="font-serif text-brand-green text-xl font-bold">Jazmín Oliveros Segura</p>
@@ -714,6 +714,12 @@
                         saberes ancestrales que honran la biodiversidad del Chocó, cuidando cada coco como un regalo de
                         la naturaleza para tu bienestar.
                     </p>
+                    <button type="button" onclick="openLegacyModal()"
+                        class="mb-10 inline-flex items-center gap-3 px-8 py-4 bg-brand-accent text-brand-green font-bold tracking-widest uppercase text-sm hover:bg-brand-green hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        <span>Conocer su historia</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
                     <div class="grid grid-cols-2 gap-10 border-t border-gray-100 pt-10">
                         <div>
                             <span class="block text-4xl font-serif text-brand-accent mb-2">100%</span>
@@ -750,7 +756,7 @@
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden relative reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/botella-1l.png"
+                        <img src="assets/botella-1l.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
                         <div class="absolute top-4 left-4">
                             <span
@@ -772,7 +778,7 @@
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-1">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/spray-60ml.png"
+                        <img src="assets/spray-60ml.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
                         <div class="absolute top-4 left-4">
                             <span
@@ -794,7 +800,7 @@
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-2">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/frasco-250ml.png"
+                        <img src="assets/frasco-250ml.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
                         <div class="absolute top-4 left-4">
                             <span
@@ -816,7 +822,7 @@
                 <div
                     class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-3">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
-                        <img src="assets/crema-peinar.png"
+                        <img src="assets/crema-peinar.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
                         <div class="absolute top-4 left-4">
                             <span
@@ -839,7 +845,7 @@
             <div class="mt-20 bg-white shadow-luxury p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 reveal">
                 <div class="lg:w-3/5">
                     <div class="relative group overflow-hidden shadow-2xl">
-                        <img src="assets/coleccion-completa.png" alt="Colección Completa Jazmín Oliveros"
+                        <img src="assets/coleccion-completa.webp" alt="Colección Completa Jazmín Oliveros"
                             class="w-full h-auto transition-transform duration-1000 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-green/20 to-transparent"></div>
                     </div>
@@ -936,14 +942,14 @@
                         <!-- Foto principal (atrás) -->
                         <div
                             class="absolute top-0 right-0 w-4/5 aspect-square border-8 border-white shadow-2xl rotate-2 overflow-hidden transition-transform duration-700 group-hover:rotate-0">
-                            <img src="assets/frutos-finca.png" alt="Frutos de la Finca"
+                            <img src="assets/frutos-finca.webp" alt="Frutos de la Finca"
                                 class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-brand-green/10"></div>
                         </div>
                         <!-- Foto secundaria (superpuesta adelante) -->
                         <div
                             class="absolute bottom-0 left-0 w-3/5 aspect-square border-8 border-white shadow-2xl -rotate-3 overflow-hidden transition-transform duration-700 group-hover:-rotate-1">
-                            <img src="assets/chicharron-coco.png" alt="Chicharrón de Coco"
+                            <img src="assets/chicharron-coco.webp" alt="Chicharrón de Coco"
                                 class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-brand-brown/10"></div>
                         </div>
@@ -1177,7 +1183,7 @@
                 </div>
                 <div class="order-1 lg:order-2 relative reveal">
                     <div class="relative z-10 p-4 bg-white shadow-luxury">
-                        <img src="assets/cultivos-coco.png" alt="Cultivos de Coco Jazmín Oliveros"
+                        <img src="assets/cultivos-coco.webp" alt="Cultivos de Coco Jazmín Oliveros"
                             class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
                     </div>
                     <!-- Decoración flotante -->
@@ -1203,7 +1209,7 @@
                 <!-- Card 1 -->
                 <div onclick="openModal('restaurante')"
                     class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/experiencia-restaurante.png"
+                    <img src="images/pescado.jpeg"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1224,7 +1230,7 @@
                 <!-- Card 2 -->
                 <div onclick="openModal('alojamiento')"
                     class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/alojamiento-real-1.jpeg"
+                    <img src="assets/alojamiento-real-1.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1245,7 +1251,7 @@
                 <!-- Card 3: Cultura y Saberes -->
                 <div onclick="openModal('cultural')"
                     class="lg:col-span-4 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/experiencia-cultural.png"
+                    <img src="assets/experiencia-cultural.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1266,7 +1272,7 @@
                 <!-- Card 4: Destino Bahía Solano -->
                 <div onclick="openModal('bahia')"
                     class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/mapa-destino.png"
+                    <img src="assets/mapa-destino.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1287,7 +1293,7 @@
                 <!-- Card 5: Sitios Turísticos -->
                 <div onclick="openModal('sitios')"
                     class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/utria.jpeg"
+                    <img src="assets/utria.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1307,7 +1313,7 @@
                 <!-- Card 6: Ballenas -->
                 <div onclick="openModal('ballenas')"
                     class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/ballena.png"
+                    <img src="assets/ballena.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1328,7 +1334,7 @@
                 <!-- Card 7: Naturaleza -->
                 <div onclick="openModal('naturaleza')"
                     class="lg:col-span-3 relative aspect-[4/5] overflow-hidden group cursor-pointer shadow-2xl">
-                    <img src="assets/frutos-finca.png"
+                    <img src="assets/frutos-finca.webp"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 p-10 flex flex-col justify-end">
@@ -1546,11 +1552,26 @@
         <i data-lucide="arrow-up" class="w-5 h-5 text-brand-green"></i>
     </button>
 
+    <!-- Legacy Modal -->\n <div id="legacyModal" class="modal-overlay items-center justify-center px-4"
+        onclick="closeLegacyModal()">
+        <div class="modal-content shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+            <button onclick="closeLegacyModal()"
+                class="absolute top-6 right-6 z-20 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div id="legacyModalBody" class="flex flex-col md:flex-row h-full">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+
     <!-- Saberes de Jazmín: Chat Widget -->
     <div class="chat-widget-container">
         <!-- Burbuja Flotante -->
         <div id="chat-bubble" class="chat-bubble">
-            <img src="assets/jazmin-retrato.png" alt="Jazmín">
+            <img src="assets/jazmin-retrato.webp" alt="Jazmín">
             <div class="chat-badge text-white">HI</div>
         </div>
     </div>
@@ -1559,7 +1580,7 @@
     <div id="chat-window" class="chat-window">
         <div class="chat-header">
             <div class="chat-header-avatar">
-                <img src="assets/jazmin-retrato.png" class="w-full h-full object-cover">
+                <img src="assets/jazmin-retrato.webp" class="w-full h-full object-cover">
             </div>
             <div>
                 <h4 class="font-bold text-sm">Saberes de Jazmín</h4>
@@ -1722,7 +1743,7 @@
         const modalData = {
             restaurante: {
                 title: "Sabores del Pacífico colombiano",
-                images: ["assets/experiencia-restaurante.png", "assets/exp-restaurante-2.png", "assets/exp-restaurante-3.png"],
+                images: ["images/pescado.jpeg", "assets/exp-restaurante-2.png", "assets/exp-restaurante-3.png"],
                 mainText: "En nuestra tierra, el coco no solo se cultiva: se cocina, se comparte y se celebra.<br><br>Nuestro restaurante ofrece comida tradicional del Pacífico colombiano, preparada de manera artesanal con ingredientes locales y recetas que hacen parte de la memoria cultural del territorio. El coco es protagonista en muchas de nuestras preparaciones, aportando sabor, identidad y tradición.",
                 extraText: "Cada plato refleja una forma de vivir y entender el Pacífico: sencilla, auténtica y profundamente conectada con la naturaleza.",
                 points: ["Cocina tradicional del Pacífico colombiano", "Ingredientes locales y preparaciones artesanales", "Uso del coco como ingrediente esencial", "Ambiente natural y tranquilo", "Experiencia gastronómica auténtica"],
@@ -1732,7 +1753,7 @@
             },
             alojamiento: {
                 title: "Descanso en la tierra del coco",
-                images: ["assets/alojamiento-real-1.jpeg", "assets/alojamiento-real-2.jpeg", "assets/alojamiento-real-3.jpeg"],
+                images: ["assets/alojamiento-real-1.webp", "assets/alojamiento-real-2.jpeg", "assets/alojamiento-real-3.jpeg"],
                 mainText: "Nuestro alojamiento está ubicado en un entorno natural, rodeado de vegetación y tranquilidad, pensado para quienes buscan desconectarse del ritmo acelerado y reconectarse con la naturaleza.<br><br>Aquí podrás descansar en un espacio sencillo y acogedor, despertar con los sonidos del Pacífico y vivir de cerca el día a día del territorio donde nace Aceite de Coco Jazmín Oliveros.",
                 extraText: "Más que hospedarse, es una invitación a vivir el Pacífico de una manera consciente y cercana.",
                 points: ["Alojamiento en entorno natural", "Ambiente tranquilo y relajado", "Conexión directa con la tierra y el territorio", "Cercanía al proceso artesanal del coco"],
@@ -1742,7 +1763,7 @@
             },
             cultural: {
                 title: "Vive el territorio y sus saberes",
-                images: ["assets/experiencia-cultural.png", "assets/exp-cultural-2.png", "assets/exp-cultural-3.png", "assets/frutos-finca.png"],
+                images: ["assets/experiencia-cultural.webp", "assets/exp-cultural-2.webp", "assets/exp-cultural-3.webp", "assets/frutos-finca.webp"],
                 mainText: "Nuestra finca es un ecosistema vivo donde el coco convive con piñas, maracuyás y cítricos que luego transformamos en nuestras famosas Cocadas. Quienes nos visitan pueden conocer el ciclo de la tierra, el proceso artesanal y la biodiversidad del Pacífico.<br><br>Entenderás que detrás de cada producto hay un territorio vibrante y una forma de vivir que respeta los tiempos de la naturaleza.",
                 extraText: "Es una inmersión auténtica en el corazón productivo del Pacífico colombiano.",
                 points: ["Conocer el cultivo y la tierra del coco", "Entender el proceso artesanal de producción", "Acercarte a la cocina y cultura del Pacífico", "Aprender sobre prácticas tradicionales y sostenibles"],
@@ -1752,7 +1773,7 @@
             },
             bahia: {
                 title: "¿Cómo Llegar?",
-                images: ["assets/mapa-destino.png", "assets/destino-1.jpg", "assets/destino-2.jpg", "assets/destino-3.jpg"],
+                images: ["assets/mapa-destino.webp", "assets/destino-1.jpg", "assets/destino-2.jpg", "assets/destino-3.jpg"],
                 mainText: "Bahía Solano te espera con los brazos abiertos. La forma más fácil y rápida de visitarnos es a través de un vuelo directo de aproximadamente 45 minutos desde el **Aeropuerto Olaya Herrera en Medellín** o desde **Pereira**.<br><br>Es un viaje corto que te traslada de la ciudad directamente al corazón de la selva chocoana.<br><br><a href='https://www.google.com/maps/place/Bah%C3%ADa+Solano,+Choc%C3%B3/@6.2230113,-77.4107147,13z' target='_blank' class='text-brand-green font-bold flex items-center gap-2 hover:underline underline-offset-4'><i data-lucide='map-pin' class='w-4 h-4'></i> Ver ubicación en Google Maps</a>",
                 extraText: "Un vuelo corto hacia una experiencia que recordarás toda la vida.",
                 points: ["Vuelos desde Medellín (Olaya Herrera)", "Vuelos desde Pereira", "Trayecto de 45 minutos", "Llegada directa a la selva"],
@@ -1762,7 +1783,7 @@
             },
             sitios: {
                 title: "Tesoros por Descubrir",
-                images: ["assets/utria.jpeg", "assets/jardin-botanico.jpeg", "assets/selva-virgen.jpeg", "assets/tesoro-4.jpg", "assets/tesoro-5.jpg", "assets/tesoro-6.jpg"],
+                images: ["assets/utria.webp", "assets/jardin-botanico.jpeg", "assets/selva-virgen.jpeg", "assets/tesoro-4.jpg", "assets/tesoro-5.jpg", "assets/tesoro-6.jpg"],
                 mainText: "Bahía Solano guarda lugares que parecen sacados de un sueño. No puedes irte sin visitar las majestuosas **Cascadas de Nabugá**, bañarte en las aguas tranquilas y cristalinas de **Playa Huina**, o perderte en la inmensa biodiversidad del **Jardín Botánico del Pacífico** y el **Parque Nacional Natural Utría**.",
                 extraText: "Cada sitio es una oportunidad para entender por qué este rincón del mundo es único.",
                 points: ["Cascadas de Nabugá (Agua dulce y mar)", "Playa Huina (Tranquilidad total)", "Jardín Botánico del Pacífico", "Parque Nacional Natural Utría", "Senderos de Selva Virgen"],
@@ -1772,7 +1793,7 @@
             },
             ballenas: {
                 title: "El Canto de las Gigantes",
-                images: ["assets/ballena.png", "assets/experiencia-restaurante.png"],
+                images: ["images/freepik__mejorar-esta-foto-para-que-quede-mas-ntida-no-se-v__83787.jpeg", "images/freepik__mejorar-esta-foto-para-que-quede-mas-ntida-no-se-v__83788.jpeg", "assets/ballena.webp"],
                 mainText: "Entre **julio y octubre**, nuestras aguas se convierten en el escenario de uno de los espectáculos más bellos del planeta: la llegada de las ballenas jorobadas. <br><br>Sentir su presencia y verlas saltar desde nuestra zona de producción es una experiencia que nos conecta con la fuerza vital de la naturaleza.",
                 extraText: "Es una temporada de magia donde el mar cobra una vida espectacular.",
                 points: ["Temporada: Julio a Octubre", "Avistamiento responsable", "Cercanía a la costa", "Vínculo con el ciclo natural"],
@@ -1782,7 +1803,7 @@
             },
             naturaleza: {
                 title: "Naturaleza y Silencio",
-                images: ["assets/frutos-finca.png", "assets/cultivos-coco.png"],
+                images: ["assets/frutos-finca.webp", "assets/cultivos-coco.webp"],
                 mainText: "Para quien busca silenciar el ruido de la ciudad, el Chocó es el 'reset' perfecto. El contacto directo con la selva virgen, sentir la humedad del bosque y escuchar solo el susurro de las olas es medicina para el alma.",
                 extraText: "Aquí el silencio es profundo y la vida se siente en cada respiro.",
                 points: ["Desconexión digital total", "Aire puro y selva virgen", "Sonidos naturales (Mar y Aves)", "Reconexión espiritual"],
@@ -1904,6 +1925,190 @@
             document.body.style.overflow = '';
         }
 
+        // Legacy Modal Functions
+        function openLegacyModal() {
+            const modal = document.getElementById('legacyModal');
+            const body = document.getElementById('legacyModalBody');
+
+            // Forzar layout de flex - IGUAL que experienceModal
+            body.className = "flex flex-col md:flex-row w-full h-full min-h-0 overflow-hidden";
+
+            body.innerHTML = `
+                <!-- Image Section - Galería de fotos históricas -->
+                <div class="md:w-2/5 flex flex-col bg-gradient-to-br from-brand-green/5 to-brand-accent/10 h-[400px] md:h-auto border-b md:border-b-0 md:border-r border-brand-accent/20 shrink-0">
+                    <div class="relative flex-grow overflow-hidden bg-black/5">
+                        <img id="legacyMainImg" src="assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2919.jpeg" 
+                             alt="Jazmín Oliveros Segura" 
+                             class="w-full h-full object-cover transition-opacity duration-300">
+                    </div>
+                    <!-- Miniaturas -->
+                    <div class="p-6 bg-white flex justify-center gap-4 border-t border-brand-accent/20">
+                        <div onclick="changeLegacyImg('assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2919.jpeg', this)" 
+                             class="w-20 h-20 cursor-pointer overflow-hidden border-2 transition-all hover:opacity-100 opacity-60 rounded-sm thumb-active border-brand-accent shadow-lg">
+                            <img src="assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2919.jpeg" class="w-full h-full object-cover">
+                        </div>
+                        <div onclick="changeLegacyImg('assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2920.jpeg', this)" 
+                             class="w-20 h-20 cursor-pointer overflow-hidden border-2 transition-all hover:opacity-100 opacity-60 rounded-sm border-transparent">
+                            <img src="assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2920.jpeg" class="w-full h-full object-cover">
+                        </div>
+                        <div onclick="changeLegacyImg('assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2921.jpeg', this)" 
+                             class="w-20 h-20 cursor-pointer overflow-hidden border-2 transition-all hover:opacity-100 opacity-60 rounded-sm border-transparent">
+                            <img src="assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2921.jpeg" class="w-full h-full object-cover">
+                        </div>
+                        <div onclick="changeLegacyImg('assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2922.jpeg', this)" 
+                             class="w-20 h-20 cursor-pointer overflow-hidden border-2 transition-all hover:opacity-100 opacity-60 rounded-sm border-transparent">
+                            <img src="assets/freepik__mejorar-esta-foto-para-que-no-se-vea-vieja__2922.jpeg" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Section - IGUAL estructura que experienceModal -->
+                <div class="md:w-3/5 flex flex-col min-h-0 bg-white">
+                    <div class="modal-scrollable p-8 md:p-12 lg:p-16 overflow-y-auto flex-grow">
+                        <div class="max-w-2xl">
+                            <!-- Header -->
+                            <div class="mb-8">
+                                <div class="inline-flex items-center gap-3 mb-4">
+                                    <span class="w-8 h-[2px] bg-brand-accent"></span>
+                                    <span class="text-brand-brown text-xs tracking-[0.4em] uppercase font-bold">Inspiración y Legado</span>
+                                </div>
+                                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-green mb-6 leading-[1.1]">
+                                    Una Mujer<br/>Ejemplo
+                                </h2>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="space-y-6 text-base md:text-lg leading-relaxed text-gray-700">
+                                <p class="text-xl font-light text-brand-green/80 leading-relaxed">
+                                    <strong class="text-brand-green font-bold">Jazmín Oliveros Segura</strong> no solo es el rostro de nuestro aceite artesanal, 
+                                    es una fuente de inspiración para las mujeres de Bahía Solano y todo el Pacífico colombiano.
+                                </p>
+                                
+                                <div class="h-px bg-gradient-to-r from-transparent via-brand-accent/30 to-transparent my-8"></div>
+                                
+                                <p>
+                                    Como <strong class="text-brand-green">Señorita Chocó 1987</strong> y <strong class="text-brand-green">Virreina Nacional de Colombia</strong>, su camino 
+                                    siempre ha estado marcado por el orgullo de su territorio y el compromiso inquebrantable con su gente.
+                                </p>
+                                
+                                <p>
+                                    Hoy, más que una empresaria exitosa, es una <strong class="text-brand-green">líder que transforma vidas</strong>. 
+                                    Apoya a otros emprendimientos locales, brinda mentoría y recursos para que más mujeres se atrevan a emprender 
+                                    y sacar adelante sus proyectos con dignidad y orgullo.
+                                </p>
+                                
+                                <p>
+                                    Su visión es clara y poderosa: <strong class="text-brand-green">Bahía Solano está llena de futuro y oportunidades</strong>. 
+                                    Con cada botella de aceite, no solo compartimos un producto artesanal, sino el mensaje vital de que es posible 
+                                    transformar nuestros saberes ancestrales en proyectos de vida sostenibles.
+                                </p>
+                            </div>
+                            
+                            <!-- Decorative Quote -->
+                            <div class="relative my-10 pl-8 py-6 border-l-4 border-brand-accent bg-gradient-to-r from-brand-light/60 to-transparent">
+                                <svg class="absolute top-4 left-4 w-6 h-6 text-brand-accent/30" fill="currentColor" viewBox="0 0 32 32">
+                                    <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z"/>
+                                </svg>
+                                <p class="italic text-lg md:text-xl text-brand-green font-light leading-relaxed">
+                                    Cuando las mujeres del Pacífico creen en sí mismas, el territorio entero florece.
+                                </p>
+                                <p class="text-right text-sm text-brand-brown mt-3 font-serif">— Jazmín Oliveros</p>
+                            </div>
+
+                            <!-- Impact Section -->
+                            <div class="mt-10 bg-white rounded-xl p-8 border border-brand-accent/20 shadow-sm">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <i data-lucide="award" class="w-5 h-5 text-brand-accent"></i>
+                                    <h3 class="text-sm font-bold text-brand-green uppercase tracking-[0.3em]">Su Legado</h3>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="flex items-start gap-3 group">
+                                        <div class="mt-1 p-2 bg-brand-accent/10 rounded-full group-hover:bg-brand-accent/20 transition-colors">
+                                            <i data-lucide="crown" class="w-4 h-4 text-brand-accent"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-brand-green text-sm">Reina de Belleza</p>
+                                            <p class="text-xs text-gray-600">Señorita Chocó 1987<br/>Virreina Nacional</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 group">
+                                        <div class="mt-1 p-2 bg-brand-accent/10 rounded-full group-hover:bg-brand-accent/20 transition-colors">
+                                            <i data-lucide="users" class="w-4 h-4 text-brand-accent"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-brand-green text-sm">Mentora</p>
+                                            <p class="text-xs text-gray-600">Empodera emprendedoras<br/>del Pacífico</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 group">
+                                        <div class="mt-1 p-2 bg-brand-accent/10 rounded-full group-hover:bg-brand-accent/20 transition-colors">
+                                            <i data-lucide="leaf" class="w-4 h-4 text-brand-accent"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-brand-green text-sm">Sostenibilidad</p>
+                                            <p class="text-xs text-gray-600">Promotora de economía<br/>circular</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 group">
+                                        <div class="mt-1 p-2 bg-brand-accent/10 rounded-full group-hover:bg-brand-accent/20 transition-colors">
+                                            <i data-lucide="heart" class="w-4 h-4 text-brand-accent"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-brand-green text-sm">Tradición</p>
+                                            <p class="text-xs text-gray-600">Defensora de saberes<br/>ancestrales</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Footer -->
+                    <div class="p-8 md:p-10 border-t border-gray-100 bg-gradient-to-br from-brand-green/5 to-white shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.03)] z-10">
+                        <a href="https://wa.me/573147947552?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20historia%20de%20Jazm%C3%ADn%20y%20sus%20productos%20artesanales." 
+                           target="_blank"
+                           class="group relative flex items-center justify-center gap-3 w-full py-5 bg-gradient-to-r from-brand-green to-brand-green/90 text-white font-bold tracking-[0.2em] uppercase text-sm overflow-hidden shadow-xl transition-all hover:shadow-2xl hover:scale-[1.02]">
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-5 h-5 group-hover:scale-110 transition-transform relative z-10">
+                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.9 69.4 27.3 106.2 27.3h.1c122.3 0 224.1-99.7 224.1-222 0-59.3-25.2-115-67.1-157.3zm-157 341.6c-33.1 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.4-2.5 5.5-6.4 8.3-9.6 2.8-3.2 3.7-5.5 5.5-9.1 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                            </svg>
+                            <span class="relative z-10">Conversar con Jazmín</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.add('active');
+            lucide.createIcons();
+            document.body.style.overflow = 'hidden';
+
+            // Reset del scroll
+            const scrollArea = body.querySelector('.modal-scrollable');
+            if (scrollArea) scrollArea.scrollTop = 0;
+        }
+
+        function closeLegacyModal() {
+            document.getElementById('legacyModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function changeLegacyImg(src, thumbContainer) {
+            const mainImg = document.getElementById('legacyMainImg');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+
+            const thumbs = thumbContainer.parentElement.querySelectorAll('div');
+            thumbs.forEach(t => {
+                t.classList.remove('thumb-active', 'border-brand-accent', 'shadow-lg');
+                t.classList.add('border-transparent');
+            });
+            thumbContainer.classList.remove('border-transparent');
+            thumbContainer.classList.add('thumb-active', 'border-brand-accent', 'shadow-lg');
+        }
+
         // Hero Slider Logic
         const slides = document.querySelectorAll('.slider-slide');
         let currentSlide = 0;
@@ -1917,6 +2122,9 @@
         if (slides.length > 0) {
             setInterval(nextSlide, 5000); // Change every 5 seconds
         }
+
+        // Reset body overflow on page load (fix for scroll issues)
+        document.body.style.overflow = '';
     </script>
 
 </body>
