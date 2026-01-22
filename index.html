@@ -132,11 +132,18 @@
             animation: slideUp 0.8s ease-out 0.6s forwards;
         }
 
-        /* Scroll Reveal: More fluid and organic */
+        /* Scroll Reveal: Faster and subtler */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Scroll Reveal: Faster and subtler */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .reveal.active {
@@ -435,18 +442,14 @@
             font-weight: 700 !important;
         }
 
-        /* Luxury Shadows: Multi-layered soft shadows */
+        /* Subtler Shadows */
         .shadow-luxury {
-            box-shadow:
-                0 10px 20px -5px rgba(46, 93, 75, 0.05),
-                0 20px 40px -10px rgba(0, 0, 0, 0.08);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.3s ease;
         }
 
         .shadow-luxury:hover {
-            box-shadow:
-                0 20px 40px -5px rgba(46, 93, 75, 0.1),
-                0 30px 60px -15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
         }
 
         /* Shimmer Effect for Buttons */
@@ -753,7 +756,7 @@
 
                 <!-- Producto 1: 1 Litro -->
                 <div
-                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden relative reveal">
+                    class="bg-white group shadow-luxury transition-all duration-300 border border-white overflow-hidden relative reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
                         <img src="assets/botella-1l.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
@@ -775,7 +778,7 @@
 
                 <!-- Producto 2: Spray 60ml -->
                 <div
-                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-1">
+                    class="bg-white group shadow-luxury transition-all duration-300 border border-white overflow-hidden reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
                         <img src="assets/spray-60ml.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
@@ -797,7 +800,7 @@
 
                 <!-- Producto 3: Frasco 250ml -->
                 <div
-                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-2">
+                    class="bg-white group shadow-luxury transition-all duration-300 border border-white overflow-hidden reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
                         <img src="assets/frasco-250ml.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
@@ -819,7 +822,7 @@
 
                 <!-- Producto 4: Crema de Peinar -->
                 <div
-                    class="bg-white group shadow-luxury transition-all duration-500 border border-white overflow-hidden reveal reveal-delay-3">
+                    class="bg-white group shadow-luxury transition-all duration-300 border border-white overflow-hidden reveal">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-50 relative">
                         <img src="assets/crema-peinar.webp"
                             class="w-full h-full object-cover img-hover-zoom brightness-95 group-hover:brightness-105 transition-all">
@@ -1137,7 +1140,7 @@
                         <!-- Línea decorativa vertical -->
                         <div class="absolute left-6 top-8 bottom-8 w-[1px] bg-brand-accent/20"></div>
 
-                        <div class="flex gap-8 relative group reveal reveal-delay-1">
+                        <div class="flex gap-8 relative group reveal">
                             <div
                                 class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
                                 1</div>
@@ -1147,7 +1150,7 @@
                                     Solano, en suelos nutridos por la brisa del mar y libres de agroquímicos.</p>
                             </div>
                         </div>
-                        <div class="flex gap-8 relative group reveal reveal-delay-2">
+                        <div class="flex gap-8 relative group reveal">
                             <div
                                 class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
                                 2</div>
@@ -1157,7 +1160,7 @@
                                     exacto de madurez, garantizando la máxima concentración de nutrientes.</p>
                             </div>
                         </div>
-                        <div class="flex gap-8 relative group reveal reveal-delay-3">
+                        <div class="flex gap-8 relative group reveal">
                             <div
                                 class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-light border border-brand-accent flex items-center justify-center text-brand-green font-serif font-bold text-xl group-hover:bg-brand-green group-hover:text-white transition-all duration-500 z-10">
                                 3</div>
